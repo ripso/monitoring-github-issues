@@ -1,5 +1,5 @@
 {
-  "name": "Monitoring Github issues",
+  "name": "monitoring-github-issues",
   "version": "1.0.0",
   "description": "Search issues with Github API and send them by email.",
   "repository": "https://github.com/ripso/monitoring-github-issues",
