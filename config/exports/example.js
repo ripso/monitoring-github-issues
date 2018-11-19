@@ -9,7 +9,7 @@ var exports = {
     repos: ['repo1', 'repo2', 'repo3'],
     states: [{
             name: 'Export 1',
-            options: {
+            options: { // Github API search options
                 labels: 'Todo'
             }
         },
@@ -24,12 +24,19 @@ var exports = {
             options: {
                 labels: 'Done'
             }
+        },
+        {
+            name: 'Hotfixes in progress',
+            options: {
+                labels: 'Hotfix,Done' // multiple labels : comma separated
+            }
         }
     ],
     template: 'templates/email.example.tpl',
     email: {
         to: ['email@example.com'],
-        //cc: ['email@example.com', 'email@example.com']
+        // cc: ['email@example.com', 'email@example.com'],
+        // bcc: ['email@example.com', 'email@example.com']
     }
 };
 
