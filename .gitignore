@@ -1,0 +1,8 @@
+templates/*.tpl
+config/exports/*.js
+config/config.js
+node_modules/*
+
+!templates/email.example.tpl
+!config/config.example.js
+!config/exports/example.js
