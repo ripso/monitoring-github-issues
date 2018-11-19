@@ -101,7 +101,7 @@ var populateObject = () => {
                                     title: issue.title,
                                     labels: labels,
                                     url: issue.html_url,
-                                    type: types.length ? types[0] : null
+                                    type: types.length ? types.join(', ') : null
                                 });
                             });
                         })
