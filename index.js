@@ -88,11 +88,7 @@ var populateObject = () => {
                         issues: []
                     }, state);
 
-                    var options = Object.assign({
-                        since: parameters.since
-                    }, state.options);
-
-                    return Issue.listIssues(options)
+                    return Issue.listIssues(state.options)
                         .then(response => {
                             return funcs.promiseForEach(response.data, issue => {
                                 var labels = issue.labels.map(label => label.name);
@@ -128,7 +124,7 @@ var populateObject = () => {
 
 var sendMail = (exports) => {
     var emailTemplate = fs.readFileSync(parameters.template, 'utf8');
-    var rendered = Mustache.render(emailTemplate, { repos: exports });
+    var rendered = Mustache.render(emailTemplate, { vars: exports });
 
     console.log(rendered);
 
